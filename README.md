@@ -37,9 +37,16 @@ This is the current preliminary design I have for the databases in PostgresSQL.
 - `message_id` (UUID): Foreign key reference to the Message table.
 - `reactor_id` (UUID): Foreign key reference to the User table (user who reacted).
 - `emoji_name` (TEXT): The name of the emoji used for the reaction (e.g., ":smile:").
-- `created_at` (TIMESTAMP): The timestamp when the reaction was added.
+- `created_at` (TIMESTAMP): The timestamp when the reaction was added. 
 
-## Backend Design 
-I see three main working parts, the discord API, my own restful API, and the statistics functions I'll need to make. My decision behind the statistics being a separate entity is to make it easier to add more features.
+## Components
+#1. Discord API
+The Discord API is responsible for interacting with the Discord platform. It receives and sends messages in real-time using WebSockets. The API handles incoming messages from Discord users and sends outgoing messages back to the Discord platform.
+
+#2. Custom RESTful API
+The Custom RESTful API acts as an intermediary between the Discord API and the Statistics functions. It receives data from the Discord API, processes it, and then interacts with the Statistics functions to perform various statistical analyses and calculations. The Custom RESTful API exposes endpoints that allow external applications to interact with the system.
+
+#3. Statistics Functions
+The Statistics Functions form the core of the system's statistical capabilities. These functions handle various statistical analyses and calculations based on the data received from the Discord API. They provide functionalities such as calculating message frequency, user engagement metrics, word usage statistics, and more. The Statistics functions are designed to be modular, making it easier to add additional features in the future.
 
 
