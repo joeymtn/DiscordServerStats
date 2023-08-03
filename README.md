@@ -39,3 +39,7 @@ This is the current preliminary design I have for the databases in PostgresSQL.
 - `emoji_name` (TEXT): The name of the emoji used for the reaction (e.g., ":smile:").
 - `created_at` (TIMESTAMP): The timestamp when the reaction was added.
 
+## Backend Design 
+I see three main working parts, the discord API, my own restful API, and the statistics functions I'll need to make. My decision behind the statistics being a separate entity is to make it easier to add more features.
+
+
