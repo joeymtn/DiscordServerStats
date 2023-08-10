@@ -5,7 +5,10 @@ I am currently in the design phase of this project, so this README is subject to
 
 # Current Sprint 0:
 I want to get an environment done. I've decided on using the NERP stack. (NodeJS Express React Postgres), 
-along with the discord API. 
+along with the discord API.
+
+# Sprint 1: 
+Create a function using discord's API that returns the person with the most messages.
 
 
 
